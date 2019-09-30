@@ -1,0 +1,8 @@
+ .producto {
+            background-color: tomato;
+            width: 300px;
+            float: left;
+            margin: 10px;
+            padding: 10px;
+            border: 10px solid black;
+        }

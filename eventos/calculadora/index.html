@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=º, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora</title>
+
+    <style>
+        #calculadora {
+            width: 500px;
+        }
+
+        #calculadora input {
+            width: 100%;
+            border: 2px solid black;
+        }
+
+        #calculadora div {
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        #calculadora div button {
+            width: 33%;
+        }
+
+        .operacion {
+            background-color: black;
+            color: white;
+            border: 2px solid white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="calculadora">
+        <input type="text" id="valores">
+        <div>
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+            <button class="btn">6</button>
+            <button class="btn">7</button>
+            <button class="btn">8</button>
+            <button class="btn">9</button>
+            <button class="btn">0</button>
+            <button class="btn">SUMA</button>
+            <button class="btn">RESTA</button>
+            <button class="btn">MULTIPLICACION</button>
+            <button class="btn">IGUAL</button>
+        </div>
+    </div>
+
+
+    <script src="calculadora.js"></script>
+</body>
+
+</html>

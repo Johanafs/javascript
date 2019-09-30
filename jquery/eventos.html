@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos</title>
+</head>
+
+<body>
+
+    <ul id="menu">
+        <li>blue</li>
+        <li>green</li>
+        <li>red</li>
+    </ul>
+
+    <script src="jquery-3.4.1.min.js"></script>
+
+    <script>
+
+        $('#menu li').on('click', cargarColor);
+
+        function cargarColor() {
+            // console.log('tocado' + $(this).text());
+
+            var color = $(this).text();
+
+            $('body').css({ 'background-color': color, 'transition': '1s' });
+        }
+
+
+    </script>
+</body>
+
+</html>

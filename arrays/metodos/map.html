@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //me permite aplicar algo, cualquier sea la accion, a todo los elementos de una lista.
+
+
+        var listaNumeros = new Array(1, 2, 3, 4, 5, 6, 7, 8, 9);
+
+        //obtener una lista cuyos valores sean la potencia al cuadrado de cada uno de los valores de la lista.
+
+        var listaCuadrados = listaNumeros.map(function (elemento) {
+            return elemento ** 2;
+        })
+
+
+        console.log(listaCuadrados);
+    </script>
+</body>
+
+</html>

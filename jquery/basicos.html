@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jquery</title>
+</head>
+
+<body>
+
+    <div class="cuadrado">
+        <p></p>
+    </div>
+    <div class="cuadrado">
+        <p></p>
+    </div>
+
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+
+        // var cuadrados = document.getElementsByClassName('cuadrado');
+
+        // for (var i = 0; i < cuadrados.length; i++) {
+        //     cuadrados[i].style.backgroundColor = "black";
+        //     cuadrados[i].style.width = "100px";
+        //     cuadrados[i].style.height = "100px";
+        //     cuadrados[i].style.margin = "10px";
+        // }
+
+        var cuadrados = $('.cuadrado');
+
+        cuadrados.css({ 'background-color': 'red', 'width': '100px', 'height': '100px', 'margin': '10px' });
+
+        var parrafosCuadrado = $('.cuadrado p');
+        parrafosCuadrado.text('Hola caracola');
+
+        cuadrados.eq(0).css({ 'background-color': 'black' });
+
+    </script>
+</body>
+
+</html>

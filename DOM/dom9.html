@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .carta {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="tablero">
+
+
+    </div>
+
+
+    <script>
+        var tablero = document.getElementById('tablero');
+
+        var carta = document.createElement('div');
+
+        var palo = document.createTextNode('sota de bastos');
+
+        carta.appendChild(palo);
+
+        carta.className = "carta";
+        carta.style.backgroundColor = "tomato";
+
+        tablero.appendChild(carta);
+    </script>
+
+</body>
+
+</html>

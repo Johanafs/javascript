@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajedrez</title>
+</head>
+
+<body>
+
+    <script>
+
+        //quiero que me hagais un tablero de ajedrez, en el tablero se podra elegir el tamaño de las celdas y la cantidad celdas.
+
+        function pintarFila(pTamano, pNumeroCasillas, pColorInicio) {
+            var fila = "";
+            var color = "";
+            for (var i = 1; i <= pNumeroCasillas; i++) {
+                if (pColorInicio == "black") {
+                    color = (i % 2 != 0) ? 'black' : 'lightgrey';
+                }else {
+                    color = (i % 2 != 0) ? 'lightgrey' : 'black';
+                }
+
+                fila += '<div style="width: ' + pTamano + 'px; height: ' + pTamano + 'px; background-color: ' + color + '; display:inline-block"></div>';
+
+            }
+
+            document.write('<div>' + fila + '<div>');
+        }
+
+        var tamano = prompt('Dame un tamaño de celda');
+        var numeroCasillas = prompt('Dame un numero de casillas');
+
+
+        function crearTablero() {
+            for (var i = 1; i <= numeroCasillas; i++) {
+                var color = (i % 2 != 0) ? "black" : "lightgrey";
+                pintarFila(tamano, numeroCasillas, color);
+            }
+        }
+
+        crearTablero();
+    </script>
+
+</body>
+
+</html>

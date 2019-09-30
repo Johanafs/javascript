@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filter 2</title>
+</head>
+
+<body>
+
+    <script>
+        var listaAnimales = new Array({
+            especie: "aguila",
+            peso: 20,
+            color: 'pardo'
+        }, {
+            especie: "hipopotamo",
+            peso: 3000,
+            color: 'gris'
+        }, {
+            especie: "raton",
+            peso: 0.40,
+            color: 'negro'
+        }, {
+            especie: "jirafa",
+            peso: 150,
+            color: 'amarillo'
+        });
+
+
+        //console.log(listaAnimales);
+
+        //lista de animales que esten entre 10 y 300 kilos
+
+
+
+
+
+        function obtenerAnimalesPorPeso(pLista, pMinimo, pMaximo) {
+            var listaAnimalesPeso = new Array();
+
+            listaAnimalesPeso = pLista.filter(pAnimal =>
+                (pAnimal.peso >= pMinimo && pAnimal.peso <= pMaximo));
+
+            console.log(listaAnimalesPeso);
+        }
+
+        obtenerAnimalesPorPeso(listaAnimales, 20, 5000);
+
+
+        //filtreis animales cuyo color tenga mas de 4 letras
+
+        function filtrarPorCaracteres(pLista, pNumeroCaracteres) {
+            var listaParcial = new Array();
+
+            listaParcial = pLista.filter(function (pAnimal) {
+                return (pAnimal.color.length >= pNumeroCaracteres)
+            })
+
+            return listaParcial;
+        }
+    </script>
+
+</body>
+
+</html>

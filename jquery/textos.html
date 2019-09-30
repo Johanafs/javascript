@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <ul id="menu">
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+    </ul>
+
+    <script src="jquery-3.4.1.min.js"></script>
+
+    <script>
+
+        //javascript nativo innerHTML y innerText
+
+        var listaSecciones = new Array('Home', 'Galeria', 'Contacto');
+
+        //recoger el ul y los lis
+
+        var contador = 0;
+        while (contador < listaSecciones.length) {
+            $('#menu li').eq(contador).text(listaSecciones[contador]);
+            contador++;
+        }
+
+        $('#menu li').eq(2).html('<strong>Texto en html</strong>');
+
+        $('#menu li:first-child').text('lo que yo quiera');
+
+        //$('#menu li:nth-child(2)').text('lo que yo quiera');
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 1</title>
+</head>
+
+<body>
+
+    <p>Juan</p>
+    <p>Carlos</p>
+    <p>Pablo</p>
+    <p>Tania</p>
+
+
+    <script>
+        var parrafos = document.getElementsByTagName('p');
+
+        var texto = parrafos[2].innerText
+
+        console.log(texto);
+
+        parrafos[1].innerText = "Javier";
+
+        parrafos[3].innerHTML = '<h2>Hola desde titulo</h2><div>otra estructura</div>';
+
+        console.log(parrafos);
+
+        for (parrafo of parrafos) {
+            parrafo.innerText = "hola";
+        }
+    </script>
+
+</body>
+
+</html>

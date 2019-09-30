@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ejercicio Bucles</title>
+    <style>
+      .cuadradoNegro {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+        float: left;
+        margin: 10px;
+      }
+
+      .cuadradoVerde {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        float: left;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var numeroCuadrados = prompt("Dame un numero de cuadrados");
+
+      for (var i = 1; i <= numeroCuadrados; i++) {
+        if (i % 2 == 0) {
+          document.write('<div class="cuadradoVerde"></div>');
+        } else {
+          document.write('<div class="cuadradoNegro"></div>');
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio dos</title>
+</head>
+
+<body>
+    <script>
+        //hacer una function que me pinte un circulo sabiendo el radio y el color
+
+        // areaCirculo = PI*(r**2);
+
+        const PI = 3.1415;
+        var radio = parseInt(prompt('Dame un radio'));
+        var color = prompt('Dame un color, red, blue, yellow, black');
+
+        function calcularArea(pColor, pRadio) {
+            var areaCirculo = PI * (pRadio ** 2);
+
+            document.write('<div style="background-color: ' + pColor + '; width: ' + 2 * pRadio + 'px ; height: ' + 2 * pRadio + 'px; border-radius: 50%" ></div>')
+
+            return areaCirculo;
+        }
+
+
+        calcularArea(color, radio);
+
+    </script>
+</body>
+
+</html>

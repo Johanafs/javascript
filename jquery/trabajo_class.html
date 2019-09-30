@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trabajo con clases de jquery</title>
+
+
+    <style>
+        .rojo {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Gestion de clases</h1>
+
+    <a id="btn1" href="http://www.google.es">Añadir la clase .rojo a h1</a>
+    <br>
+    <a id="btn2" href="#">Borrar la clase .rojo a h1</a>
+    <br>
+    <a id="btn3" href="#">Cambiar estado de la clase .rojo a h1</a>
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+
+        /*
+            $('selector').addClass('nombreClaseCss');
+            $('selector').removeClass('nombreClaseCss');
+            $('selector').toggleClass('nombreClaseCss');
+
+        */
+
+        //opcion 1
+
+        // $('#btn1').on('click', insertar);
+        // $('#btn2').on('click', borrar);
+        // $('#btn3').on('click', cambiar);
+
+        // function insertar(e) {
+        //     e.preventDefault();
+
+        //     $('h1').addClass('rojo');
+
+        // }
+
+        // function borrar(e) {
+        //     e.preventDefault();
+
+        //     $('h1').removeClass('rojo');
+        // }
+
+
+        // function cambiar(e) {
+        //     e.preventDefault();
+
+        //     $('h1').toggleClass('rojo');
+        // }
+
+        //opcion 2
+
+
+        for (var i = 1; i <= 3; i++) {
+            $('#btn' + i).on('click', function (e) {
+                e.preventDefault();
+                $('h1').toggleClass('rojo');
+
+                var url = "http://www.google.com";
+
+                setTimeout(function () {
+                    window.location = url;
+                }, 2000)
+
+            })
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

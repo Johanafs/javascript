@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Menu animado</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .menu {
+            list-style: none;
+        }
+
+        .menu {
+            display: flex;
+        }
+
+        .menu li a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+            border-right: 1px solid black;
+        }
+
+        #marcador {
+            position: relative;
+            left: 0px;
+            top: 0px;
+            border-bottom: 5px solid black;
+            width: 0px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="menu">
+        <li><a href="http://www.google.es">Inicio</a></li>
+        <li><a href="http://www.amazon.es">Quienes somos</a></li>
+        <li><a href="http://www.yahoo.es">Contacto</a></li>
+        <li><a href="http://www.estudioclandestino.es">Descubre nuestros servicios destacados</a></li>
+        <li><a href="http://www.neoland.es">Zona Privada</a></li>
+    </ul>
+    <div id="marcador"></div>
+
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+
+        var boton = $('.menu li a'); //obtengo el boton del DOM
+
+        var anchoprimerboton = boton.eq(0).css('width');
+        $('#marcador').css('width', anchoprimerboton);
+
+
+        boton.on('click', activarMarcador);
+        //boton.on('mouseover', activarMarcador);
+
+        function activarMarcador(e) {
+            e.preventDefault();
+
+            var ancho = $(this).outerWidth();
+            var border = $(this).css('border-right-width');
+            border = parseInt(border);
+
+            var posicion = $(this).offset().left - border;
+            //var posicion = $(this).position().left;
+
+            $('#marcador').stop().animate({ 'width': ancho + border + "px", 'left': posicion }, 400);
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

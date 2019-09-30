@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JSON - array asociativo</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        var producto = {
+            titulo: "Caja de leche",
+            precio: 2,
+            tipo: "Desnatada",
+            capacidad: 1.5
+        }
+
+        //console.log(producto);
+
+        //nomenclatura de corchete
+
+        var precio = producto['precio'];
+
+        //nomenclatura de punto
+
+        var titulo = producto.titulo;
+
+
+        for (var clave in producto) {
+            document.write(clave + ": " + producto[clave] + "<br>")
+        }
+
+
+
+        ///OTRO EJEMPLO
+
+        var alumno = {
+            nombre: "Adrian",
+            edad: 27,
+            matricula: "AE456",
+            estado: true,
+            asignaturas: ['Matematicas', 'Algebra', 'Fisica', 'Tecnología'],
+            notas: {
+                matematicas: 9,
+                algebra: 3,
+                fisica: 7
+            }
+        }
+
+        // console.log(alumno);
+
+        var asignaturas = new Array();
+        for (var descripcion in alumno) {
+            //console.log(alumno[descripcion]);
+            if (descripcion == "asignaturas") {
+                asignaturas = alumno['asignaturas'];
+
+                console.log(asignaturas);
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

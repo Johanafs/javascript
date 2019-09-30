@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ejercicio 4</title>
+  </head>
+  <body>
+    <script>
+      //quiero que introduzcais un numero por pantalla, quiero que me saqueis el ultimo digito, los dos ultimos digitos, y los tres ultimos digitos, de cualquier numero. Y si no es numero pidas todo el rato que de un numero.
+      //345678
+      //8
+      //78
+      //678
+
+      do {
+        var numero = prompt("Dame un numero");
+      } while (isNaN(numero));
+
+      numero = Number(numero);
+      var mensaje = "los numero son ";
+
+      for (var i = 10; i <= 1000; i = i * 10) {
+        var resultado = numero % i;
+        mensaje += resultado + ", ";
+        document.write("<div>" + resultado + "</div>");
+      }
+
+      document.write(mensaje);
+    </script>
+  </body>
+</html>

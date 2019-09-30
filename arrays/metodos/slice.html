@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slice</title>
+</head>
+
+<body>
+
+    <script>
+        //me permite guardar partes del array en otro array, partir el array principal, en arrays mas pequeños.
+
+        var listaAlumnos = new Array('Alex', 'Pepe', 'Juan', 'Lucia', 'Carmen', 'Alberto', 'Damian', 'Lorena');
+
+        var listaParcial = new Array();
+
+        //cojo la posicion del primer elemento que quiero traerme y como posicion final el elemento siguiente al ultimo que quiero obtener.
+
+        listaParcial = listaAlumnos.slice(0, 3);
+
+        console.log(listaParcial);
+
+        var listaMujeres = listaAlumnos.slice(3, 5).concat(listaAlumnos.slice(-1));
+
+        console.log(listaMujeres);
+
+        //coger los tres ultimos.
+
+
+        var listaParcial2 = listaAlumnos.slice(-3);
+
+        console.log(listaParcial2);
+    </script>
+</body>
+
+</html>

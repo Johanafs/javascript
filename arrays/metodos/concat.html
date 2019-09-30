@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>metodo concat</title>
+</head>
+
+<body>
+
+    <script>
+
+        var verduras = new Array('lechuga', 'Pimientos', 'Guisantes');
+        var carnes = new Array('Pollo', 'Ternera');
+        var pescados = new Array('Lubina', 'Merluza');
+
+        var listaCompra = new Array();
+
+        //ejemplo 1
+
+        listaCompra = carnes.concat(pescados);
+
+        //ejemplo 2
+
+        listaCompra = carnes.concat(pescados, verduras);
+
+        // console.log(listaCompra);
+
+        //ejemplo 3
+
+        listaCompra = carnes.concat(pescados).concat(verduras);
+
+        //ejemplo 4 spreadoprator
+
+        listaCompra = [...pescados, ...carnes, ...verduras];
+
+        console.log(listaCompra);
+
+
+    </script>
+</body>
+
+</html>

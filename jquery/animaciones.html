@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animaciones</title>
+    <style>
+        .cuadrado {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+        }
+
+        .animacion {
+            transform: scaleX(1.5);
+            background-color: blue;
+            transition: 1s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cuadrado"></div>
+
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+
+        //ocultar y mostrar
+
+        var cuadrado = $('.cuadrado');
+
+        // cuadrado.hide(1000)
+        // cuadrado.show(2000);
+
+        //fade fadeIn fadeOut fadeTo fadeToggle
+
+        // cuadrado.fadeOut({ duration: 1000, complete: saludar });
+        // cuadrado.fadeIn(1000).delay(3000);
+
+        // cuadrado.fadeTo(1000, 0.3)
+
+        // cuadrado.fadeToggle(1000); //hace lo contrario del estado en el que este mi elemento.
+
+        // function saludar() {
+        //     console.log('ocultado');
+        // }
+
+
+        //slide slideUp slideDown slideToogle
+
+        // cuadrado.slideUp(1000);
+        //cuadrado.slideDown(1000);
+        //cuadrado.slideToggle(1000);
+
+
+        //animar varias atributos a la vez.
+
+
+        cuadrado.animate({ 'margin-left': '300px', 'width': '300px', 'height': '300px', 'border-radius': '50%' }, 1000, function () {
+            cuadrado.addClass('animacion');
+        });
+
+
+
+
+    </script>
+
+</body>
+
+</html>

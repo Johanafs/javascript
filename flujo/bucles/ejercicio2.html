@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ejercicio 2 - blackjack</title>
+  </head>
+  <body>
+    <script>
+      //quiero me pidas por pantalla un numero de cartas y un color de tres posibles colores (azul, red, verde). Me tienes que pintar las cartas en el color elegido.
+
+      var numeroCartas = prompt("Dame un numero de cartas");
+      var color = prompt("Dame un color, azul o rojo o verde");
+      var altura = prompt("Dame un altura");
+      var anchura = prompt("Dame un ancho");
+      var contador = 1;
+      while (contador <= numeroCartas) {
+        switch (color) {
+          case "azul":
+            document.write(
+              '<div style="width: ' +
+                anchura +
+                "px; height: " +
+                altura +
+                'px;background-color: blue;margin: 10px"></div>'
+            );
+            break;
+
+          case "rojo":
+            document.write(
+              '<div style="width: ' +
+                anchura +
+                "px; height: " +
+                altura +
+                'px;background-color: red: margin: 10px"></div>'
+            );
+            break;
+
+          case "verde":
+            document.write(
+              '<div style="width: ' +
+                anchura +
+                "px; height: " +
+                altura +
+                'px;background-color: green; margin: 10px"></div>'
+            );
+            break;
+        }
+
+        contador++;
+      }
+    </script>
+  </body>
+</html>

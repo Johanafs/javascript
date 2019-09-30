@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filter</title>
+</head>
+
+<body>
+
+    <script>
+        var listaNotas = new Array(4, 6, 7, 8, 10, 3, 2, 7.5, 6, 8);
+
+
+        var listaSuspensos = new Array();
+        var listaAprobados = new Array();
+
+        listaSuspensos = listaNotas.filter(comprobarSuspenso);
+
+        function comprobarSuspenso(pValor) {
+            return pValor < 5
+        }
+
+        listaAprobados = listaNotas.filter(function (pValor) {
+            return pValor >= 5
+        })
+
+        console.log(listaAprobados);
+
+
+        //arrow functions
+
+        var listaOtrosAprobados = listaNotas.filter(pValor => pValor >= 5);
+
+        console.log(listaOtrosAprobados);
+    </script>
+
+</body>
+
+</html>

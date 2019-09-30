@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Palindromo</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        var cadena = "Dabale arroz a la zorra el abad";
+
+        var cadenaSinEspacio = cadena.split(" ");
+        var cadenaEntera = "";
+        var cadenaEnteraReverse = "";
+        for (let i = 0; i < cadenaSinEspacio.length; i++) {
+            cadenaEntera += cadenaSinEspacio[i];
+        }
+        for (var j = 0; j < cadenaEntera.length; j++) {
+            var longitud = cadenaEntera.length - 1;
+            cadenaEnteraReverse += cadenaEntera[longitud - j];
+        }
+
+        console.log(cadenaEntera);
+        console.log(cadenaEnteraReverse);
+
+        var espalindromo = true;
+
+        if (cadenaEntera.toLowerCase() != cadenaEnteraReverse.toLowerCase()) {
+            espalindromo = false;
+        }
+
+
+        alert(espalindromo);
+
+
+
+
+    </script>
+</body>
+
+</html>

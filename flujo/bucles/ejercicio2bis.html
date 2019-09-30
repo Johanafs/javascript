@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <style>
+      .carta {
+        width: 50px;
+        height: 100px;
+        margin: 10px;
+      }
+
+      .rojo {
+        background-color: red;
+      }
+
+      .verde {
+        background-color: green;
+      }
+
+      .azul {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var numeroCartas = prompt("Dame un numero de cartas");
+      var color = prompt("Dame un color, azul, verde o rojo");
+      color = color.toLowerCase();
+
+     
+
+      for (var i = 1; i <= numeroCartas; i++) {
+        document.write('<div class="carta ' + color + '"></div>');
+      }
+
+     
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //dado una cantidad de 54321 segundos quiero que me saques por pantalla la cantidad de horas minutos y segundo que hay en dicha cantidad.
+
+      var segundosTotales = prompt("Dame una cantidad de segundos");
+
+      var horas;
+      var minutos;
+      var segundosFinales;
+
+      horas = segundosTotales / (60 * 60);
+      horas = parseInt(horas);
+      //parseInt(racional) me devuelve solo la parte entera
+
+      var segundosQuedan = segundosTotales % (60 * 60);
+
+      minutos = parseInt(segundosQuedan / 60);
+
+      segundosFinales = segundosQuedan % 60;
+
+      alert(
+        "En " +
+          segundosTotales +
+          " tengo " +
+          horas +
+          " horas, " +
+          minutos +
+          " minutos y " +
+          segundosFinales +
+          " segundos"
+      );
+    </script>
+  </body>
+</html>

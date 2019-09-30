@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>String como array</title>
+
+    <style>
+        .btn {
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+
+        var texto = "supercalifragilisticoespialidoso";
+
+        //console.log(texto.length);
+
+        //console.log(texto[ texto.length - 1]);
+
+        for (var i = 0; i < texto.length; i++) {
+            //console.log(texto[i]);
+        }
+
+
+        var seccion = 'quienes_somos';
+
+        var textoSeccion = seccion.split('_')[0] + " " + seccion.split('_')[1];
+
+
+        var btn = '<a class="btn" href="' + seccion + '.html">' + textoSeccion + '</a>';
+
+        document.write(btn);
+
+
+    </script>
+
+</body>
+
+</html>

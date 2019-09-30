@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dom</title>
+
+    <style>
+        a {
+            color: green !important;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="menu">
+        <li><a href="http://www.yahoo.es">Item 1</a></li>
+        <li><a href="http://www.amazon.es">Item 2</a></li>
+        <li><a href="http://www.google.es">Item 3</a></li>
+        <li><a href="http://www.neoland.es">Item 4</a></li>
+    </ul>
+
+    <script>
+        //quiero sustituir el enlace de cada uno de los items por otra url.
+
+        var menu = document.getElementById('menu');
+
+        var enlaces = menu.getElementsByTagName('a');
+
+        for (var i = 0; i < enlaces.length; i++) {
+            enlaces[i].href = "http://www.estudioclandestino.es";
+            enlaces[i].title = "Estudio Clandestino, donde trabaja el mejor profe del mundo";
+
+            enlaces[i].style.color = "red";
+
+        }
+
+        
+    </script>
+
+</body>
+
+</html>

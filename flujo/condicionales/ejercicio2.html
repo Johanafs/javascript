@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ejercicio 2</title>
+  </head>
+  <body>
+    <script>
+      //me pide un numero cualquiera por pantalla y tengo que comprobar si el numero es par o impar.
+
+      var numero = prompt("Dame un numero");
+
+      numero = parseInt(numero);
+
+      if (numero % 2 == 0 && !isNaN(numero)) {
+        alert("par");
+      } else if (!isNaN(numero)) {
+        alert("impar");
+      } else {
+        alert("No es un numero");
+      }
+    </script>
+  </body>
+</html>

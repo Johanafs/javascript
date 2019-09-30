@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RemoveChild</title>
+
+    <style>
+        .cuadrado {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="cuadrado" id="cuadrado_0">0</div>
+    <script>
+        var contador = 1;
+        var posicion = 1;
+        var direccion = "derecha";
+
+        function crearCuadrado() {
+
+            var cuadrado = document.createElement('div');
+            cuadrado.className = "cuadrado";
+            cuadrado.id = "cuadrado_" + contador;
+
+            document.body.appendChild(cuadrado);
+
+            cuadrado.innerText = contador;
+            var anchoCuadrado = 100;
+
+            cuadrado.style.marginLeft = (anchoCuadrado * posicion) + "px";
+
+            if (posicion == 3) {
+                direccion = "izquierda";
+            } else if (posicion == 0) {
+                direccion = "derecha";
+            }
+
+            if (direccion == "derecha") {
+                posicion++
+            } else {
+                posicion--
+            }
+
+
+            contador++;
+
+
+        }
+
+        function borrarCuadrado(pId) {
+            var cuadradoBorrar = document.getElementById(pId);
+
+            cuadradoBorrar.parentNode.removeChild(cuadradoBorrar);
+        }
+    </script>
+
+</body>
+
+</html>

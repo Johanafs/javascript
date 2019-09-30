@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="pepe" id=""></div>
+    <div class="pepe" id=""></div>
+
+    <script>
+
+        var numero = 3;
+        console.log(numero);
+        var lista = new Array(1, 2)
+
+        var objetoHTML = document.getElementsByClassName('pepe');
+        console.log(lista);
+
+        console.log(objetoHTML);
+
+
+        var objetoJson = { nombre: "Juan", apellido: "Perez" };
+
+
+
+        console.log(objetoJson);
+
+        objetoHTML[0].innerText = `${objetoJson.nombre} ${objetoJson.apellido}`;
+
+
+
+    </script>
+</body>
+
+</html>

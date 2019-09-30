@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box
+        }
+
+        #tablero {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #tablero .carta {
+
+            width: 30%;
+            margin-left: 3%;
+            background-color: tomato;
+            height: 200px;
+            padding: 20px;
+            margin-top: 3%;
+            cursor: pointer;
+        }
+
+        #tablero .carta h2 {
+            display: none;
+        }
+
+
+        #tablero .cartaSeleccionada {
+            width: 30%;
+            margin-left: 3%;
+            background-color: indigo;
+            height: 200px;
+            padding: 20px;
+            margin-top: 3%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="tablero">
+
+    </div>
+
+    <script>
+
+
+        var listaAnimales = new Array('leon', 'guepardo', 'pantera', 'leon', 'pantera', 'guepardo');
+
+
+
+
+
+        var tablero = document.getElementById('tablero');
+
+
+        var contarCartas = 0;
+        var parejas = new Array();
+
+
+        function lanzarCartas(pLista) {
+            var cartas = "";
+            for (carta of pLista) {
+                var micarta = document.createElement('div');
+                micarta.className = 'carta';
+                var h2 = `<h2>${carta}</h2>`;
+                micarta.innerHTML = h2;
+                tablero.appendChild(micarta);
+                micarta.addEventListener('click', darVuelta)
+            }
+        }
+
+
+        function darVuelta(e) {
+            e.target.style.background = "indigo";
+            //console.log(e.target);
+            e.target.firstChild.style.display = "block";
+            e.target.firstChild.style.color = "white";
+            contarCartas++;
+            if (contarCartas >= 3) {
+                var todasCartas = document.getElementsByClassName('carta');
+                for (carta of todasCartas) {
+                    carta.style.background = "tomato";
+                    carta.firstChild.style.display = "none";
+
+                    carta.addEventListener('click', darVuelta);
+                }
+                contarCartas = 0;
+                parejas = [];
+            } else if (contarCartas < 3) {
+
+                e.target.removeEventListener('click', darVuelta);
+
+                parejas.push(e.target);
+            }
+
+            if (parejas.length == 2 && parejas[0].firstChild.innerText == parejas[1].firstChild.innerText) {
+                // alert('son iguales');
+                for (var i = 0; i < parejas.length; i++) {
+                    parejas[i].removeEventListener('click', darVuelta);
+                    parejas[i].className = "cartaSeleccionada";
+                }
+                contarCartas = 0;
+                parejas = [];
+            }
+
+
+        }
+
+
+        lanzarCartas(reordenarLista(listaAnimales));
+
+
+        function reordenarLista(pLista) {
+
+            var listaTemporal = new Array();
+            var miLista = pLista;
+
+            while (miLista.length > 0) {
+                var aleatorio = parseInt(Math.random() * miLista.length);
+                listaTemporal.push(miLista[aleatorio]);
+                miLista.splice(aleatorio, 1);
+
+            }
+
+            // listaTemporal = pLista.sort(function () {
+            //     return Math.random() - 0.5;
+            // })
+
+            return listaTemporal;
+        }
+
+        //teneis que saber el texto de la carta que pinchais, compararlo con el de la segunda carta y entonce removeis el listener de esas dos cartas.
+
+
+
+    </script>
+</body>
+
+</html>

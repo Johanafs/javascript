@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Metodos de refinamiento</title>
+</head>
+
+<body>
+
+    <div class="caja">Caja 1</div>
+    <div class="caja">Caja 2</div>
+    <div class="caja">Caja 3</div>
+    <div class="caja">Caja 4</div>
+    <div class="caja especial">
+        <p>lorem</p>
+        <p>lorem</p>
+        <p>lorem</p>
+    </div>
+    <div class="caja">Caja 6</div>
+    <div class="caja pepe">Caja 7</div>
+    <div class="caja">Caja 8</div>
+    <div class="caja">Caja 9</div>
+    <div class="caja">Caja 10</div>
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+        //escoje un elemento de todos los divs
+        $('.caja').eq(1).text('Ola k ase');
+
+        //escoje todos menos el que esta dentro de not
+        $('.caja').not('.especial').not('.pepe').css('background-color', 'red');
+
+        //busca un elemento cualquier dentro de un elemento padre.
+        $('.especial p').text('hola');
+
+        $('body').find('.especial p').text('juan');
+
+
+        //como atacar por jquery desde el padre.
+
+        var especial = $('.caja').parent().find('.especial');
+
+        especial.css('color', 'green');
+
+        //como poder coger el elemento anterior al mio o posterior al mio (al mismo nivel);
+
+        $('.pepe').prev().text('cambiado desde pepe');
+        $('.pepe').next().text('cambiado desde pepe');
+
+
+        //como acceder a los hijos.
+
+        $('.especial').children().css('font-weight', 'bold');
+
+    </script>
+</body>
+
+</html>

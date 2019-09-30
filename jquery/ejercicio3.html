@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carrousel automatico</title>
+    <style>
+        .galeria {
+            width: 400px;
+            height: auto;
+            margin: 0 auto;
+            border: 5px solid black;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="galeria">
+        <img src="images/bmw.jpg" alt="BMW">
+    </div>
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+        var imagenes = new Array('bmw', 'ferrari', 'mustang');
+        var contador = 0;
+
+
+        var intervalor = setInterval(cargarImagen, 4000);
+
+
+        function cargarImagen() {
+
+            // var numeroImagenes = imagenes.length;
+            // var indice = contador % numeroImagenes
+            $('.galeria img').fadeOut(1000, function () {
+                contador = (contador >= imagenes.length) ? 0 : contador;
+
+                $('.galeria img').attr('src', 'images/' + imagenes[contador] + '.jpg');
+                $('.galeria img').attr('alt', imagenes[contador]);
+            });
+
+            $('.galeria img').fadeIn(1000)
+            contador++;
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

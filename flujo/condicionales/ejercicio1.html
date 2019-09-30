@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Portero de discoteca</title>
+  </head>
+  <body>
+    <script>
+      //en una discoteca no se puede entrar si eres menor de edad. La edad clave es 18 años. Pregunta por pantalla la edad y dile al usuario si puede entrar o no.
+
+      var edad = parseInt(prompt("Dime tu edad"));
+      const EDAD_CORTE = 18;
+
+      if (isNaN(edad) == true) {
+        alert("edad no reconocida");
+      } else {
+        var mensaje =
+          edad < EDAD_CORTE ? "Un vasito de leche y a la cama" : "Bienvenido";
+        alert(mensaje);
+      }
+
+      //opcion 1
+      //   if (edad < EDAD_CORTE) {
+      //     alert("Un vasito de leche y a la cama");
+      //   } else {
+      //     alert("Bienvenido");
+      //   }
+
+      //opcion 2
+
+      //   var mensaje =
+      //     edad < EDAD_CORTE ? "Un vasito de leche y a la cama" : "Bienvenido";
+
+      //   alert(mensaje);
+    </script>
+  </body>
+</html>

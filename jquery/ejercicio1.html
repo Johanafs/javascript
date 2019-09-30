@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Barras y estrellas</title>
+</head>
+
+<body>
+
+
+    <script src="jquery-3.4.1.min.js"></script>
+
+    <script>
+
+        var datos = new Array();
+        datos = [
+            {
+                color: 'blue',
+                ancho: 20
+            },
+            {
+                color: 'red',
+                ancho: 40
+            },
+            {
+                color: 'green',
+                ancho: 60
+            },
+            {
+                color: 'yellow',
+                ancho: 80
+            },
+            {
+                color: 'black',
+                ancho: 60
+            },
+            {
+                color: 'pink',
+                ancho: 40
+            },
+            {
+                color: 'tomato',
+                ancho: 20
+            }
+
+        ]
+
+        var contenido = "";
+
+        for (dato of datos) {
+            contenido += '<div style="background-color:' + dato.color + '; width: ' + dato.ancho + 'px; height:40px "></div>';
+        }
+
+        $('body').html(contenido);
+
+    </script>
+</body>
+
+</html>

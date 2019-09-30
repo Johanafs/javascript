@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+
+        .menu {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .menu li {
+            background-color: tomato;
+            padding: 10px;
+            color: white;
+            width: 100px;
+            text-align: right;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        body {
+            height: 100vh;
+            background-image: url('images/ferrari.jpg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            transition: 1s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="menu">
+        <li data-coche="bmw">BMW</li>
+        <li data-coche="mustang">MUSTANG</li>
+        <li data-coche="ferrari">FERRARI</li>
+    </ul>
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+
+        // $('.menu li').on('mouseover', salir);
+        // $('.menu li').on('mouseout', entrar);
+
+        $('.menu li').hover(salir, entrar);
+        $('.menu li').on('click', cargarImagen);
+
+
+        function salir() {
+            $(this).stop().animate({ 'width': '120px' }, 400);
+        }
+
+        function entrar() {
+            $(this).stop().animate({ 'width': '100px' }, 400);
+        }
+
+        function cargarImagen() {
+
+            var nombreFoto = $(this).data('coche');
+
+            $('body').css('background-image', 'url(images/' + nombreFoto + '.jpg)');
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

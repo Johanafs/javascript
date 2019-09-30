@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object Keys</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const ALUMNO = {
+            nombre: "Juan",
+            apellido: "Perez",
+            edad: 37,
+            clave: "ddd"
+        }
+
+        //ES5 let nombre = ALUMNO.nombre;
+
+        let { nombre } = ALUMNO;
+        let { apellido } = ALUMNO;
+        let { edad } = ALUMNO;
+
+
+        // console.log(nombre, apellido, edad);
+
+        console.log(Object.keys(ALUMNO));
+
+        document.write(`${ALUMNO.nombre} ${ALUMNO.apellido}`);
+
+    </script>
+
+</body>
+
+</html>

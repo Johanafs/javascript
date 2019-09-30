@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //lista de divisores
+        var numero = prompt('Dame un numero');
+        var listaDivisores = new Array();
+
+        // for (var i = 0; i <= numero; i++) {
+        //     if (numero % i == 0 && listaDivisores.length < 10) {
+        //         listaDivisores.push(i);
+        //     }
+        // }
+
+        // console.log(listaDivisores);
+
+        //lista de multiplos
+
+        var otronumero = Number(prompt('dame otro numero'));
+        var numeroMultiplos = Number(prompt('Dime el numero de multiplos que quieres'));
+
+        var listaMultiplos = new Array();
+        var multiplicacion = otronumero * numeroMultiplos
+
+        // for (var i = otronumero; i <= multiplicacion; i += otronumero) {
+        //     listaMultiplos.push(i);
+        // }
+
+        console.log(listaMultiplos);
+
+        for (var i = 1; i <= numeroMultiplos; i++) {
+            var multiplo = otronumero * i;
+            listaMultiplos.push(multiplo);
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

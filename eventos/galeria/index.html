@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Galeria Javascript</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        #carrusel {
+            width: 400px;
+            height: 500px;
+            margin: 0 auto;
+        }
+
+        .botones {
+            display: flex;
+        }
+
+        .botones div {
+            width: 100%;
+            height: 100px;
+            background-color: black;
+            color: white;
+            border: 2px solid white;
+            text-align: center;
+            padding: 35px;
+            cursor: pointer;
+        }
+
+        .botones div:hover {
+            background-color: tomato;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="carrusel">
+        <div>
+            <img id="imagen" src="">
+        </div>
+        <div class="botones">
+            <div id="izq">izquierda</div>
+            <div id="der">derecha</div>
+        </div>
+    </div>
+
+
+    <script src="js/galeria.js"></script>
+</body>
+
+</html>

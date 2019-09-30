@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find </title>
+</head>
+
+<body>
+
+    <script>
+        //me permite buscar el primer elemento que cumple la condicion.
+
+        var listaAnimales = new Array({
+            especie: "aguila",
+            peso: 20,
+            color: 'pardo'
+        }, {
+            especie: "hipopotamo",
+            peso: 3000,
+            color: 'negro'
+        }, {
+            especie: "raton",
+            peso: 0.40,
+            color: 'negro'
+        }, {
+            especie: "jirafa",
+            peso: 150,
+            color: 'amarillo'
+        });
+
+        var animal = listaAnimales.find(function (animal) {
+            return (animal.color == "negro");
+        })
+
+        for (clave in animal) {
+            if (clave == "color") {
+                console.log(clave + ": " + animal[clave]);
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

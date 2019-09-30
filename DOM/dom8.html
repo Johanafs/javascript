@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section id="agenda">
+
+
+        <!-- <article class="contactos"><h3>Nombre y apellido del contacto</h3><ul><li>Telefono: 916778990</li><li>Email: email@gmail.com</li></ul></article><hr> -->
+
+    </section>
+
+    <script>
+        var agenda = new Array();
+
+        agenda = [{
+                nombre: "Joaquin",
+                apellido: "Perez",
+                telefono: "917778899",
+                email: "joaquin@gmail.com"
+            },
+            {
+                nombre: "Lucia",
+                apellido: "Lopez",
+                telefono: "916667899",
+                email: "lucia@gmail.com"
+            },
+            {
+                nombre: "Pepe",
+                apellido: "Rodriguez",
+                telefono: "917778899",
+                email: "pepe@gmail.com"
+            },
+            {
+                nombre: "Maria",
+                apellido: "Guitierrez",
+                telefono: "912456789",
+                email: "maria@gmail.com"
+            },
+            {
+                nombre: "Sonia",
+                apellido: "Perez",
+                telefono: "918765432",
+                email: "sonia@gmail.com"
+            },
+            {
+                nombre: "Enrique",
+                apellido: "Varela",
+                telefono: "912345678",
+                email: "enrique@gmail.com"
+            },
+            {
+                nombre: "Rosa",
+                apellido: "Mateo",
+                telefono: "934567890",
+                email: "rosa@gmail.com"
+            },
+            {
+                nombre: "Laura",
+                apellido: "Perez",
+                telefono: "98675642",
+                email: "laura@gmail.com"
+            },
+            {
+                nombre: "Sandra",
+                apellido: "Renata",
+                telefono: "912345678",
+                email: "sandra@gmail.com"
+            },
+            {
+                nombre: "Inma",
+                apellido: "Jarillo",
+                telefono: "917778899",
+                email: "inma@gmail.com"
+            },
+            {
+                nombre: "Miguel",
+                apellido: "Coser",
+                telefono: "919876378",
+                email: "miguel@gmail.com"
+            },
+        ];
+
+        // console.log(agenda);
+
+        //tengo que crear un funcion que pinte por pantalla la agenda usando como formato o plantilla lo que hemos puesto en el html.
+
+        var seccion = document.getElementById('agenda');
+        // var contador = 0;
+
+        for (entrada of agenda) {
+            seccion.innerHTML += '<article class="contactos"><h3>' + entrada.nombre + ' ' + entrada.apellido +
+                '</h3><ul><li>Telefono: ' + entrada.telefono + '</li><li>Email: ' + entrada.email +
+                '</li></ul></article><hr>';
+
+            // var contactos = document.getElementsByClassName('contactos');
+
+            // contactos[contador].style.backgroundColor = "blue";
+
+            // contador++;
+
+        }
+
+
+        for (var i = 0; i < agenda.length; i++) {
+            seccion.innerHTML += '<article class="contactos">' +
+                '<h3>' + agenda[i].nombre + ' ' + agenda[i].apellido + '</h3>' +
+                '<ul>' + '<li>Telefono: ' + agenda[i].telefono + '</li>' +
+                '<li>Email: ' + agenda[i].email + '</li></ul></article><hr>';
+
+            // var contactos = document.getElementsByClassName('contactos');
+
+            // contactos[contador].style.backgroundColor = "blue";
+
+            // contador++;
+
+        }
+    </script>
+
+</body>
+
+</html>

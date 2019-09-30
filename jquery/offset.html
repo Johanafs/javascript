@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Offset</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .caja {
+            background-color: black;
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 500px;
+            left: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="caja">
+
+    </div>
+
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script>
+
+        //offset() me da la distancia de mi objeto con respecto al 0,0 de la pagina
+
+        alert($('.caja').offset().top); //top respecto alto
+
+        alert($('.caja').offset().left); //left respecto a la izquirda;
+
+        console.log($('.caja').position()); //position coordenadas
+
+
+
+    </script>
+</body>
+
+</html>

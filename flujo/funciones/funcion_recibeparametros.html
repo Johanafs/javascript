@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Funcion que recibe paramatros</title>
+</head>
+
+<body>
+  <script>
+    // saludar("Juan");
+
+    function saludar(pNombre = "Juan", pApellido = "Perez") {
+
+      if (pNombre == "") {
+        pNombre = "Almudena";
+      }
+      var nombre = pNombre;
+      document.write("<h2>Hola " + nombre + " " + pApellido + "</h2>");
+    }
+
+    // saludar("", "Fernandez");
+    saludar("Paula");
+  </script>
+</body>
+
+</html>

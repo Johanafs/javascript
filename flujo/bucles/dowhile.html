@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Do while</title>
+  </head>
+  <body>
+    <script>
+      //funciona exactamente igual que el while pero me aseguro una iteración una entrada al bucle.
+
+      //   var numero = 6;
+
+      //   do {
+      //     console.log("he entrado");
+      //     console.log(numero);
+      //     numero++;
+      //   } while (numero < 8);
+
+      //pido que se me pase un numero por pantalla number
+
+      var minumero;
+
+      do {
+        var numeroDado = prompt("Dame un numero");
+        minumero = Number(numeroDado);
+      } while (isNaN(minumero));
+
+      console.log("el numero es " + minumero);
+    </script>
+  </body>
+</html>

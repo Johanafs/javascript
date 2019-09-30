@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        var listaAlumnos = new Array();
+
+
+        var alumno1 = {
+            nombre: "Juan",
+            apellido: "Perez",
+            edad: 37,
+            notamedia: 10
+        }
+
+        var alumno2 = {
+            nombre: "Lucia",
+            apellido: "Gonzalez",
+            edad: 27,
+            notamedia: 8.5
+        }
+
+        var alumno3 = {
+            nombre: "David",
+            apellido: "Guitierrez",
+            edad: 32,
+            notamedia: 4
+        }
+
+        var alumno4 = {
+            nombre: "Monica",
+            apellido: "Herrero",
+            edad: 40,
+            notamedia: 2
+        }
+
+        var alumno5 = {
+            nombre: "Joaquin",
+            apellido: "Alcalde",
+            edad: 24,
+            notamedia: 5
+        }
+
+
+        listaAlumnos = [alumno1, alumno2, alumno3, alumno4, alumno5];
+
+        console.log(listaAlumnos);
+
+        for (var i = 0; i < listaAlumnos.length; i++) {
+            for (var clave in listaAlumnos[i]) {
+                //document.write(clave + ": " + listaAlumnos[i][clave] + ' <br>');
+            }
+        }
+
+        //sacarme por pantalla solo los alumnos que este suspesos.
+    var notamedia
+
+        for (var i = 0; i < listaAlumnos.length; i++) {
+            notamedia = listaAlumnos[i].notamedia;
+            if (notamedia  < 5) {
+                for (var clave in listaAlumnos[i]) {
+                    document.write(clave + ": " + listaAlumnos[i][clave] + ' <br>');
+                }
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>

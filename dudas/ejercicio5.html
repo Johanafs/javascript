@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button class="boton">Tania</button>
+    <button class="boton">Juan</button>
+    <button class="boton">Paula</button>
+
+    <input type="text" id="buscar">
+
+
+    <script>
+
+        var botonTania = document.getElementsByClassName('boton');
+
+        // for (var i = 0; i < botonTania.length; i++) {
+        //     botonTania[i].addEventListener('click', cargar);
+        // }
+     
+        for (boton of botonTania) {
+            boton.addEventListener('click', cargar);
+            
+        }
+
+        function cargar(mievento) {
+            console.log(mievento.target.innerText);
+            console.log(this.innerText);
+
+            //this es lo mismo en eventos que event.target
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

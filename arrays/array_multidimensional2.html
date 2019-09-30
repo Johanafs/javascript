@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array multidimensinal</title>
+</head>
+
+<body>
+
+    <script>
+
+        var aves = new Array();
+
+        var felinos = new Array();
+
+        var anfibios = new Array();
+
+
+        var zoo = new Array(
+            ['Aguila', 'Guacamayo', 'Periquito', 'Colibri'],
+            ['Tigre', 'Leopardo', 'Pantera'],
+            ['Hipopotamo', 'Rana', 'Cocodrilo']
+        );
+
+
+        for (var i = 0; i < zoo.length; i++) {
+            for (var j = 0; j < zoo[i].length; j++) {
+
+                switch (i) {
+                    case 0:
+                        aves[aves.length] = zoo[i][j];
+                        break;
+
+                    case 1:
+                        felinos[felinos.length] = zoo[i][j];
+                        break;
+
+                    case 2:
+                        anfibios[anfibios.length] = zoo[i][j];
+                        break;
+                }
+            }
+        }
+        console.log(aves);
+        console.log(felinos);
+        console.log(anfibios);
+
+
+
+    </script>
+
+</body>
+
+</html>

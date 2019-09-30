@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dom 7</title>
+</head>
+
+<body>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quia doloribus, sit consequatur sapiente explicabo
+        corporis sunt nemo blanditiis unde? </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quia doloribus, sit consequatur sapiente explicabo
+        corporis sunt nemo blanditiis unde?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quia doloribus, sit consequatur sapiente explicabo
+        corporis sunt nemo blanditiis unde?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quia doloribus, sit consequatur sapiente explicabo
+        corporis sunt nemo blanditiis unde?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quia doloribus, sit consequatur sapiente explicabo
+        corporis sunt nemo blanditiis unde?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quia doloribus, sit consequatur sapiente explicabo
+        corporis sunt nemo blanditiis unde?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum quia doloribus, sit consequatur sapiente explicabo
+        corporis sunt nemo blanditiis unde?</p>
+
+
+    <script>
+        //quiero que me pongais un parrafo en backgroundcolor negro con texto blanco y parrafo en color beige con texto, salteados. A cada parrafo le añadimos un padding de 10px
+
+        var parrafos = document.getElementsByTagName('p');
+        var contador = 0;
+        for (parrafo of parrafos) {
+            if (contador % 2 == 0) {
+                parrafo.style.backgroundColor = "black";
+                parrafo.style.color = "white";
+            } else {
+                parrafo.style.backgroundColor = "beige";
+                parrafo.style.color = "black";
+            }
+
+            parrafo.style.padding = "10px";
+            contador++;
+        }
+    </script>
+
+</body>
+
+</html>

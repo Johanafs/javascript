@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array Simple</title>
+</head>
+
+<body>
+
+    <script>
+
+        var listaAlumnos = new Array();
+
+        listaAlumnos = ['Salva', 'Tania', 'Paula', 'Richard', 'Mikel'];
+
+        console.log(listaAlumnos);
+
+        console.log(listaAlumnos.length); //cantidad de elementos de la lista
+
+
+        //quiero sacar un elemento concreto de la lista, usare su posicion en la lista, sabiendo que las lista se numeran de 0 a length-1
+
+        console.log(listaAlumnos[0]);
+        console.log(listaAlumnos[1]);
+        console.log(listaAlumnos[2]);
+
+        //quiero que me pinteis esta lista con un bucle en html.
+
+        var lista = "<ul>";
+
+        for (var i = 0; i < listaAlumnos.length; i++) {
+            lista += '<li>' + listaAlumnos[i] + '</li>'
+        }
+
+        lista += '</ul>';
+
+        document.write(lista)
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

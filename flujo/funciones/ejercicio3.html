@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora</title>
+</head>
+
+<body>
+
+
+    <script>
+        //quiero que desarrollemos un calculadora. Nos pida dos numeros por separado, y el calculo que queremos hacer (SUMA, RESTA, MULTIPLICACIÓN y DIVISION)
+
+        do {
+            var numero1 = Number(prompt('Dame un numero'));
+            var numero2 = Number(prompt('Dame otro numero'));
+        } while (isNaN(numero1) || isNaN(numero2));
+
+
+        var operacion = prompt('Dime que quieres hacer, sumar, restar, producto, division, potencia');
+
+        switch (operacion) {
+            case "sumar":
+                sumar(numero1, numero2);
+                break;
+
+            case "restar":
+                restar(numero1, numero2);
+                break;
+
+            case "producto":
+                producto(numero1, numero2);
+                break;
+
+            case "division":
+                dividir(numero1, numero2);
+                break;
+
+            case "potencia":
+                potencia(numero1, numero2);
+                break;
+
+            default:
+                alert('operacion no permitida');
+                break;
+        }
+
+
+        function sumar(a, b) {
+            var resultado = a + b;
+            document.write('<h1>La suma es: ' + resultado + '</h1>');
+        }
+
+        function restar(a, b) {
+            var resultado = a - b;
+            document.write('<h1>La resta es: ' + resultado + '</h1>');
+        }
+
+        function producto(a, b) {
+            var resultado = a * b;
+            document.write('<h1>La producto es: ' + resultado + '</h1>');
+        }
+
+        function division(a, b) {
+            var resultado = a / b;
+            document.write('<h1>La division es: ' + resultado + '</h1>');
+        }
+
+        function potencia(a, b) {
+            var resultado = a ** b;
+            document.write('<h1>La potencia es: ' + resultado + '</h1>');
+        }
+
+
+
+    </script>
+</body>
+
+</html>

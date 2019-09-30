@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Datos encadenados</title>
+</head>
+
+<body>
+
+    <section id="agenda">
+
+    </section>
+
+    <script>
+
+        var listaAlumnos = new Array();
+        //multidimensional
+
+        listaAlumnos = [
+            {
+                nombre: "Juan",
+                apellido: "Perez",
+                edad: 37
+            },
+            {
+                nombre: "Johana",
+                apellido: "Franco",
+                edad: 37
+            },
+            {
+                nombre: "Tania",
+                apellido: "Fernandez",
+                edad: 37
+            },
+            {
+                nombre: "Marcelo",
+                apellido: "Rodriguez",
+                edad: 35
+            },
+            {
+                nombre: "Almudena",
+                apellido: "Espadafor",
+                edad: 26
+            }]
+
+        console.log(listaAlumnos);
+
+
+
+        var agenda = document.querySelector('#agenda');
+
+        for (var i = 0; i < listaAlumnos.length; i++) {
+            var nombre = listaAlumnos[i].nombre;
+            var apellido = listaAlumnos[i].apellido;
+            agenda.innerHTML += `<div>${nombre} ${apellido}</div>`;
+
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

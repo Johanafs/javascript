@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section id="agenda">
+
+
+        <!-- <article class="contactos"><h3>Nombre y apellido del contacto</h3><ul><li>Telefono: 916778990</li><li>Email: email@gmail.com</li></ul></article><hr> -->
+
+    </section>
+
+    <section id="local">
+
+
+    </section>
+
+    <script>
+        var agenda = new Array();
+
+        agenda = [{
+                nombre: "Joaquin",
+                apellido: "Perez",
+                telefono: "917778899",
+                email: "joaquin@gmail.com"
+            },
+            {
+                nombre: "Lucia",
+                apellido: "Lopez",
+                telefono: "916667899",
+                email: "lucia@gmail.com"
+            },
+            {
+                nombre: "Pepe",
+                apellido: "Rodriguez",
+                telefono: "917778899",
+                email: "pepe@gmail.com"
+            },
+            {
+                nombre: "Maria",
+                apellido: "Guitierrez",
+                telefono: "912456789",
+                email: "maria@gmail.com"
+            },
+            {
+                nombre: "Sonia",
+                apellido: "Perez",
+                telefono: "918765432",
+                email: "sonia@gmail.com"
+            },
+            {
+                nombre: "Enrique",
+                apellido: "Varela",
+                telefono: "912345678",
+                email: "enrique@gmail.com"
+            },
+            {
+                nombre: "Rosa",
+                apellido: "Mateo",
+                telefono: "934567890",
+                email: "rosa@gmail.com"
+            },
+            {
+                nombre: "Laura",
+                apellido: "Perez",
+                telefono: "98675642",
+                email: "laura@gmail.com"
+            },
+            {
+                nombre: "Sandra",
+                apellido: "Renata",
+                telefono: "912345678",
+                email: "sandra@gmail.com"
+            },
+            {
+                nombre: "Inma",
+                apellido: "Jarillo",
+                telefono: "917778899",
+                email: "inma@gmail.com"
+            },
+            {
+                nombre: "Miguel",
+                apellido: "Coser",
+                telefono: "919876378",
+                email: "miguel@gmail.com"
+            },
+        ];
+
+        //tengo que crear un funcion que pinte por pantalla la agenda usando como formato o plantilla lo que hemos puesto en el html.
+
+        var seccion = document.getElementById('agenda');
+        var seccion2 = document.getElementById('local');
+
+        function pintarAgenda(pAgenda, pSeccion) {
+            for (contacto of pAgenda) {
+                //creo el h3 del titulo del contacto
+                var h3 = document.createElement('h3');
+                //genero su texto
+                var textoh3 = document.createTextNode(contacto.nombre + " " + contacto.apellido);
+                //meto el texto dentro del h3
+                h3.appendChild(textoh3);
+
+                //----- //
+
+
+                var li1 = document.createElement('li');
+                var li2 = document.createElement('li');
+
+                var textoli1 = document.createTextNode('Telefono: ' + contacto.telefono);
+
+                var textoli2 = document.createTextNode('Email: ' + contacto.email);
+
+                li1.appendChild(textoli1);
+                li2.appendChild(textoli2);
+
+
+                var listado = document.createElement('ul');
+
+                listado.appendChild(li1);
+                listado.appendChild(li2);
+
+                //---- //
+
+                //Genero el article contenedor de todo y el hr
+
+                var article = document.createElement('article');
+                var hr = document.createElement('hr');
+
+                //-----//
+
+                article.appendChild(h3);
+                article.appendChild(listado);
+
+                pSeccion.appendChild(article);
+                pSeccion.appendChild(hr);
+            }
+        }
+
+        pintarAgenda(agenda, seccion2);
+    </script>
+
+</body>
+
+</html>

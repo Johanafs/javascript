@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- <div class="producto">
+        <p>nombre del producto: </p>
+        <p>cantidad: </p>
+        <p>precio: </p>
+    </div> -->
+
+    <script>
+
+        var listaCompra = new Array();
+
+        listaCompra = [
+            {
+                nombre: "Leche",
+                cantidad: 2,
+                precio: 0.55,
+                tipo: ['desnatada', 'semi', 'sin lactosa']
+            },
+            {
+                nombre: "Pan",
+                cantidad: 1,
+                precio: 0.35,
+                tipo: ['integral', 'trigo', 'centeno']
+            },
+            {
+                nombre: "Pan",
+                cantidad: 1,
+                precio: 0.35,
+                tipo: ['integral', 'trigo', 'centeno']
+            },
+            {
+                nombre: "Pan",
+                cantidad: 1,
+                precio: 0.35,
+                tipo: ['integral', 'trigo', 'centeno']
+            },
+            {
+                nombre: "Pan",
+                cantidad: 1,
+                precio: 0.35,
+                tipo: ['integral', 'trigo', 'centeno']
+            },
+            {
+                nombre: "Pan",
+                cantidad: 1,
+                precio: 0.35,
+                tipo: ['integral', 'trigo', 'centeno']
+            },
+            {
+                nombre: "Pan",
+                cantidad: 1,
+                precio: 0.35,
+                tipo: ['integral', 'trigo', 'centeno']
+            },
+        ]
+
+        var listaTipodeLeche = new Array();
+
+        listaTipodeLeche = listaCompra[0].tipo;
+
+
+        for (articulo of listaCompra) {
+
+
+            document.body.innerHTML += `<div class="producto">
+                                            <p>nombre del producto:${articulo.nombre} </p>
+                                            <p>cantidad: ${articulo.cantidad} </p>
+                                            <p>precio: ${articulo.precio} </p>
+                                        </div>`
+        }
+
+
+
+    </script>
+</body>
+
+</html>
